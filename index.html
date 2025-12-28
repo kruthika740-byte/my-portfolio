@@ -3,107 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kruthika R | ISE Engineer Portfolio</title>
+    <title>Kruthika R | ISE Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .card-hover:hover { transform: translateY(-10px); border-color: #10b981; }
-        .nav-link:hover { color: #10b981; }
     </style>
 </head>
 <body>
 
     <nav class="fixed top-0 w-full z-50 glass py-4 px-6 flex justify-between items-center">
-        <h1 class="text-xl font-bold tracking-tighter text-emerald-500">KRUTHIKA.R</h1>
+        <h1 class="text-xl font-bold tracking-tighter text-emerald-500 underline decoration-2">KRUTHIKA.R</h1>
         <div class="space-x-8 text-sm font-medium hidden md:flex">
-            <a href="#about" class="nav-link transition">About</a>
-            <a href="#work" class="nav-link transition">Projects</a>
-            <a href="#contact" class="nav-link transition">Contact</a>
+            <a href="#about" class="hover:text-emerald-500 transition">About</a>
+            <a href="#skills" class="hover:text-emerald-500 transition">Skills</a>
+            <a href="#work" class="hover:text-emerald-500 transition">Projects</a>
+            <a href="#contact" class="hover:text-emerald-500 transition text-emerald-500 border border-emerald-500/30 px-4 py-1 rounded-full">Hire Me</a>
         </div>
     </nav>
 
-    <section id="about" class="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <div class="w-32 h-32 bg-emerald-500/20 rounded-full mb-8 flex items-center justify-center border border-emerald-500/30" data-aos="zoom-in">
-            <span class="text-4xl">👩‍💻</span>
+    <section id="about" class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-emerald-400 text-xs font-bold tracking-widest uppercase" data-aos="fade-down">
+            Information Science Engineering Student
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight" data-aos="fade-up">
-            Information Science <span class="text-emerald-500">Engineer</span>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter" data-aos="fade-up">
+            Building the <span class="text-emerald-500">Future</span> of Data.
         </h1>
-        <p class="text-gray-400 max-w-2xl text-lg mb-10" data-aos="fade-up" data-aos-delay="100">
-            Hi, I'm Kruthika. I specialize in building data-driven applications, secure cloud environments, and automated information retrieval systems. Currently exploring the intersection of AI and Cybersecurity.
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10" data-aos="fade-up" data-aos-delay="100">
+            I'm Kruthika, a developer focused on Python automation, cloud security, and predictive analytics. I build tools that turn complex data into actionable intelligence.
         </p>
-        <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="#contact" class="bg-emerald-600 hover:bg-emerald-500 px-8 py-3 rounded-full font-bold transition">Hire Me</a>
-            <a href="#work" class="glass px-8 py-3 rounded-full font-bold hover:bg-white/5 transition">View Work</a>
+        <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://github.com/kruthika740-byte" target="_blank" class="text-2xl hover:text-emerald-500 transition"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="text-2xl hover:text-emerald-500 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition">
+                <i class="fab fa-python text-3xl text-yellow-500 mb-3"></i>
+                <h4 class="font-bold">Python</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition">
+                <i class="fas fa-database text-3xl text-blue-500 mb-3"></i>
+                <h4 class="font-bold">SQL & NoSQL</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition">
+                <i class="fas fa-cloud text-3xl text-emerald-500 mb-3"></i>
+                <h4 class="font-bold">Cloud (Render)</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition">
+                <i class="fab fa-flask text-3xl text-gray-300 mb-3"></i>
+                <h4 class="font-bold">Flask API</h4>
+            </div>
         </div>
     </section>
 
     <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-12" data-aos="fade-right">Engineering Projects</h2>
+        <h2 class="text-3xl font-bold mb-12" data-aos="fade-right">Featured Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
             <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up">
-                <div class="h-48 rounded-[1.8rem] bg-gradient-to-br from-blue-900/40 to-black mb-6 flex items-center justify-center">
-                    <span class="text-blue-400 font-bold uppercase tracking-widest text-[10px]">Data Analytics</span>
+                <div class="h-48 rounded-[1.8rem] bg-blue-900/20 mb-6 flex items-center justify-center">
+                    <i class="fas fa-chart-line text-4xl text-blue-500"></i>
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold mb-2">Predictive Sales Tracker</h3>
-                    <p class="text-gray-400 text-sm mb-4">Uses regression models to help business owners reduce waste by 15%.</p>
+                    <p class="text-gray-400 text-sm">Analyzes retail datasets to predict stock depletion using regression models.</p>
                 </div>
             </div>
 
             <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-48 rounded-[1.8rem] bg-gradient-to-br from-purple-900/40 to-black mb-6 flex items-center justify-center">
-                    <span class="text-purple-400 font-bold uppercase tracking-widest text-[10px]">Cybersecurity</span>
+                <div class="h-48 rounded-[1.8rem] bg-purple-900/20 mb-6 flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-4xl text-purple-500"></i>
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold mb-2">Secure Client Vault</h3>
-                    <p class="text-gray-400 text-sm mb-4">Encrypted document management with Role-Based Access Control (RBAC).</p>
+                    <p class="text-gray-400 text-sm">Encrypted document management system with high-security RBAC.</p>
                 </div>
             </div>
 
-            <div class="glass p-2 rounded-[2rem] card-hover border-emerald-500/20" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-48 rounded-[1.8rem] bg-gradient-to-br from-emerald-900/40 to-black mb-6 flex flex-col items-center justify-center">
-                    <div id="status-display" class="font-mono text-emerald-400 text-[10px] text-center">
-                        &lt;system_ready&gt;
-                    </div>
+            <div class="glass p-2 rounded-[2rem] card-hover border-emerald-500/20 shadow-lg shadow-emerald-500/5" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 rounded-[1.8rem] bg-emerald-900/20 mb-6 flex flex-col items-center justify-center">
+                    <div id="status-display" class="font-mono text-emerald-400 text-[10px] text-center">SYSTEM_READY</div>
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold mb-2 text-emerald-400">Automated Lead Hunter</h3>
-                    <p class="text-gray-400 text-sm mb-4">Live cloud-connected web scraper. Hosted on Render.</p>
-                    <button id="scrape-btn" onclick="getLiveLeads()" class="w-full bg-emerald-600 text-white py-2 rounded-xl hover:bg-emerald-500 transition font-bold text-xs">Run Live Scrape</button>
+                    <p class="text-gray-400 text-sm mb-4">High-speed web scraper connected to a live Python API on Render.</p>
+                    <button id="scrape-btn" onclick="getLiveLeads()" class="w-full bg-emerald-600 text-white py-2 rounded-xl hover:bg-emerald-500 transition font-bold text-xs uppercase tracking-widest">Run Live Scrape</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">Start a Project</h2>
-            <p class="text-gray-400">Have an idea? Submit your project details below and I'll get back to you.</p>
+    <section id="contact" class="py-24 px-6 max-w-2xl mx-auto">
+        <div class="glass p-10 rounded-[2.5rem] border-emerald-500/20">
+            <h2 class="text-3xl font-bold mb-6 text-center">Start a Project</h2>
+            <form action="https://formspree.io/f/mgoelojq" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-emerald-500 focus:outline-none">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-emerald-500 focus:outline-none">
+                <textarea name="message" rows="4" placeholder="Describe your project..." required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 focus:border-emerald-500 focus:outline-none"></textarea>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-xl font-bold transition">Send Proposal</button>
+            </form>
         </div>
-        
-        <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-8 rounded-[2rem] space-y-6">
-            <div>
-                <label class="block text-sm font-medium mb-2">Full Name</label>
-                <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-emerald-500 focus:outline-none transition">
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Email Address</label>
-                <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-emerald-500 focus:outline-none transition">
-            </div>
-            <div>
-                <label class="block text-sm font-medium mb-2">Project Description</label>
-                <textarea name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-emerald-500 focus:outline-none transition" placeholder="Tell me about the project you'd like to build..."></textarea>
-            </div>
-            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-xl font-bold transition">Send Project Proposal</button>
-        </form>
     </section>
 
-    <footer class="py-10 text-center text-gray-600 text-xs">
-        © 2025 Kruthika R | Built with Flask, Tailwind, and Render
+    <footer class="py-20 px-6 border-t border-white/5 text-center">
+        <div class="flex justify-center gap-8 mb-8">
+            <a href="https://github.com/kruthika740-byte" target="_blank" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your-email@example.com" class="text-gray-400 hover:text-white transition text-xl"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-600 text-xs">© 2025 Kruthika R | Built with Python, Flask & Render</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -112,15 +125,15 @@
         async function getLiveLeads() {
             const btn = document.getElementById('scrape-btn');
             const statusBox = document.getElementById('status-display');
-            btn.innerText = "Connecting...";
+            btn.innerText = "Waking Cloud...";
             try {
-                // Update with your real Render URL
+                // Ensure this URL matches your Render address
                 const response = await fetch('https://ise-backend-5ck1.onrender.com/api/leads');
                 const data = await response.json();
-                statusBox.innerHTML = `[FOUND: ${data.results[0].company}]`;
-                alert(`Data Received: ${data.results[0].company}`);
+                statusBox.innerHTML = `<span class="text-[8px]">[FOUND: ${data.results[0].company}]</span>`;
+                alert(`✅ Cloud Connection Success!\n\nLead: ${data.results[0].company}\nEmail: ${data.results[0].email}\nStudent: ${data.ISE_Student}`);
             } catch (error) {
-                alert("Cloud server is waking up. Please try again in 30 seconds!");
+                alert("Server is spinning up! Please try again in 40 seconds.");
             } finally {
                 btn.innerText = "Run Live Scrape";
             }
