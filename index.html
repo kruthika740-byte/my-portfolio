@@ -113,13 +113,18 @@
 <script>
     async function getLiveLeads() {
         try {
-            // Replace the URL below with your Render.com live URL once it is ready
-            const response = await fetch('http://127.0.0.1:5000/api/leads');
+            // Change the URL to your RENDER link
+            const response = await fetch('https://ise-backend-5ck1.onrender.com/api/leads');
+            
+            if (!response.ok) throw new Error("Cloud server waking up...");
+
             const data = await response.json();
             
-            alert(`✅ Backend Connected!\n\nLead Found: ${data.results[0].company}\nEmail: ${data.results[0].email}`);
+            // Show the result
+            alert(`✅ Cloud Success!\n\nLead Found: ${data.results[0].company}\nEmail: ${data.results[0].email}`);
+            
         } catch (error) {
-            alert("Connection Failed! Make sure your Python server is running.");
+            alert("The server is 'waking up'. Please wait 30 seconds and click again!");
         }
     }
 </script>
