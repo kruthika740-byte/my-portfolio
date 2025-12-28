@@ -110,20 +110,20 @@
     </script>
     </footer>
 
-    <script>
-        async function getLiveLeads() {
-            try {
-                const response = await fetch('http://127.0.0.1:5000/api/leads');
-                const data = await response.json();
-                alert(`Lead Found: ${data.results[0].company}\nEmail: ${data.results[0].email}`);
-            } catch (error) {
-                alert("Make sure your VS Code Python terminal is running!");
-            }
+<script>
+    async function getLiveLeads() {
+        try {
+            // Replace the URL below with your Render.com live URL once it is ready
+            const response = await fetch('http://127.0.0.1:5000/api/leads');
+            const data = await response.json();
+            
+            alert(`✅ Backend Connected!\n\nLead Found: ${data.results[0].company}\nEmail: ${data.results[0].email}`);
+        } catch (error) {
+            alert("Connection Failed! Make sure your Python server is running.");
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
 
-</body>
-</html>
