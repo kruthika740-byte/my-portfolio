@@ -7,130 +7,127 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: white; font-family: sans-serif; }
+        body { background-color: #050505; color: white; font-family: sans-serif; overflow-x: hidden; }
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
         }
+        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .card-hover:hover {
-            transform: translateY(-10px);
-            border-color: rgba(16, 185, 129, 0.4); /* Emerald border on hover */
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: translateY(-12px);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="mb-16">
-            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">ISE Engineering Projects</h2>
-            <div class="h-1 w-20 bg-emerald-500 rounded"></div>
+<section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-white" data-aos="fade-right">ISE Engineering Projects</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-blue-900/40 to-black mb-6 flex flex-col items-center justify-center p-4">
+                <div class="w-full flex items-end gap-1 h-24">
+                    <div class="bg-blue-500 w-1/4 h-1/2 rounded-t"></div>
+                    <div class="bg-blue-400 w-1/4 h-3/4 rounded-t"></div>
+                    <div class="bg-blue-600 w-1/4 h-full rounded-t"></div>
+                    <div class="bg-purple-500 w-1/4 h-2/3 rounded-t"></div>
+                </div>
+                <span class="mt-4 text-blue-400 font-bold uppercase tracking-widest text-[10px]">Data Analytics & Mining</span>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">Predictive Sales Tracker</h3>
+                <p class="text-gray-400 text-sm mb-4">A BI tool that analyzes retail datasets to predict stock depletion. It uses regression models to help business owners reduce waste by 15%.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-blue-300">Python</span>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-blue-300">Scikit-Learn</span>
+                </div>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-blue-900/40 to-black mb-6 flex flex-col items-center justify-center p-4">
-                    <div class="w-full flex items-end gap-1 h-24">
-                        <div class="bg-blue-500 w-1/4 h-1/2 rounded-t"></div>
-                        <div class="bg-blue-400 w-1/4 h-3/4 rounded-t"></div>
-                        <div class="bg-blue-600 w-1/4 h-full rounded-t"></div>
-                        <div class="bg-purple-500 w-1/4 h-2/3 rounded-t"></div>
-                    </div>
-                    <span class="mt-4 text-blue-400 font-bold uppercase tracking-widest text-[10px]">Data Analytics & Mining</span>
+        <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-purple-900/40 to-black mb-6 flex flex-col items-center justify-center">
+                <div class="w-12 h-12 border-4 border-purple-500 rounded-lg flex items-center justify-center mb-2">
+                    <div class="w-2 h-4 bg-purple-500"></div>
                 </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Predictive Sales Tracker</h3>
-                    <p class="text-gray-400 text-sm mb-4">A BI tool that analyzes retail datasets to predict stock depletion using regression models.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">Python</span>
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">Scikit-Learn</span>
-                    </div>
+                <span class="text-purple-400 font-bold uppercase tracking-widest text-[10px]">Cybersecurity & Cloud</span>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">Secure Client Vault</h3>
+                <p class="text-gray-400 text-sm mb-4">An encrypted document management system with Role-Based Access Control (RBAC). Designed for law firms needing high-security data storage.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-purple-300">Firebase</span>
+                    <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-purple-300">AES-256</span>
                 </div>
             </div>
-
-            <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-purple-900/40 to-black mb-6 flex flex-col items-center justify-center">
-                    <div class="w-12 h-12 border-4 border-purple-500 rounded-lg flex items-center justify-center mb-2">
-                        <div class="w-2 h-4 bg-purple-500"></div>
-                    </div>
-                    <span class="text-purple-400 font-bold uppercase tracking-widest text-[10px]">Cybersecurity & Cloud</span>
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Secure Client Vault</h3>
-                    <p class="text-gray-400 text-sm mb-4">Encrypted management system with Role-Based Access Control (RBAC) for data security.</p>
-                    <div class="flex gap-2">
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">Firebase</span>
-                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">AES-256</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="glass p-2 rounded-[2rem] card-hover border-emerald-500/20 shadow-lg shadow-emerald-500/5" data-aos="fade-up" data-aos-delay="300">
-                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-emerald-900/40 to-black mb-6 flex flex-col items-center justify-center">
-                    <div id="status-display" class="font-mono text-emerald-400 text-xs text-center">
-                        &lt;system_ready&gt;<br>
-                        [CLOUD BACKEND IDLE]<br>
-                        &lt;awaiting_request&gt;
-                    </div>
-                    <span class="mt-4 text-emerald-400 font-bold uppercase tracking-widest text-[10px]">Information Retrieval</span>
-                </div>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2 text-emerald-400">Automated Lead Hunter</h3>
-                    <p class="text-gray-400 text-sm mb-4">Web scraper aggregating niche market contacts. Connected to a live Python Flask API on Render.</p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex gap-2">
-                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">Python</span>
-                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">Flask</span>
-                        </div>
-                        <button id="scrape-btn" onclick="getLiveLeads()" class="text-[10px] bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-500 transition-all font-bold shadow-lg shadow-emerald-500/20">
-                            Run Live Scrape
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(); // Start animations
+        <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="300">
+            <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-emerald-900/40 to-black mb-6 flex flex-col items-center justify-center">
+                <div id="status-display" class="font-mono text-emerald-400 text-xs text-center">
+                    &lt;scanning...&gt;<br>
+                    [SYSTEM READY]<br>
+                    &lt;v1.0_active&gt;
+                </div>
+                <span class="mt-4 text-emerald-400 font-bold uppercase tracking-widest text-[10px]">Information Retrieval</span>
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2 text-emerald-400">Automated Lead Hunter</h3>
+                <p class="text-gray-400 text-sm mb-4">A high-speed web scraper that aggregates niche market contacts. Connected to your live Render backend.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex gap-2">
+                        <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">Python</span>
+                        <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">Flask</span>
+                    </div>
+                    <button id="scrape-btn" onclick="getLiveLeads()" class="text-[10px] bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-500 transition-all font-bold">
+                        Run Live Scrape
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        async function getLiveLeads() {
-            const btn = document.getElementById('scrape-btn');
-            const statusBox = document.getElementById('status-display');
+    </div>
+</section>
+
+<footer class="py-10 text-center text-gray-500 text-sm border-t border-white/5">
+    © 2025 Kruthika R | ISE Student Portfolio
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    async function getLiveLeads() {
+        const btn = document.getElementById('scrape-btn');
+        const statusBox = document.getElementById('status-display');
+        
+        btn.innerText = "Waking Cloud...";
+        statusBox.innerHTML = "&lt;request_sent&gt;<br>[WAKING RENDER]<br>&lt;wait_50s&gt;";
+
+        try {
+            // Your Live Render URL from our previous step
+            const response = await fetch('https://ise-backend-5ck1.onrender.com/api/leads');
             
-            // UI Feedback
-            btn.innerText = "Waking Cloud...";
-            btn.style.opacity = "0.5";
-            statusBox.innerHTML = "&lt;connecting_to_render&gt;<br>[INITIALIZING ENGINE]<br>&lt;please_wait_50s&gt;";
+            if (!response.ok) throw new Error("Server Error");
 
-            try {
-                // Your exact Render URL
-                const response = await fetch('https://ise-backend-5ck1.onrender.com/api/leads');
-                
-                if (!response.ok) throw new Error("Server Error");
+            const data = await response.json();
+            
+            statusBox.innerHTML = `&lt;found_data&gt;<br>[${data.results[0].company}]<br>&lt;complete&gt;`;
+            
+            alert(`✅ CLOUD CONNECTION SUCCESS!\n\nLead: ${data.results[0].company}\nEmail: ${data.results[0].email}\nStudent: ${data.ISE_Student}`);
 
-                const data = await response.json();
-                
-                // Show Success in Card
-                statusBox.innerHTML = `&lt;scrape_complete&gt;<br>[FOUND: ${data.results[0].company}]<br>&lt;data_retrieved&gt;`;
-                
-                // Final Alert
-                alert(`✅ LIVE DATA RECEIVED\n\nCompany: ${data.results[0].company}\nEmail: ${data.results[0].email}\nISE Student: ${data.ISE_Student}`);
-
-            } catch (error) {
-                statusBox.innerHTML = "&lt;error&gt;<br>[SERVER_TIMEOUT]<br>&lt;retry_in_30s&gt;";
-                alert("The cloud server is taking a moment to wake up (Standard for Free Hosting). Please try again in 30 seconds!");
-            } finally {
-                btn.innerText = "Run Live Scrape";
-                btn.style.opacity = "1";
-            }
+        } catch (error) {
+            statusBox.innerHTML = "&lt;retry_needed&gt;<br>[SERVER SLEEPING]<br>&lt;click_again&gt;";
+            alert("The free server is waking up! Please wait 30 seconds and click 'Run Live Scrape' again.");
+        } finally {
+            btn.innerText = "Run Live Scrape";
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
 
