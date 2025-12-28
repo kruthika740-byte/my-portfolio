@@ -1,119 +1,101 @@
-<HTML> <HEAD>
-<TITLE>More Examples of Scripts Created with CGI.pm</TITLE>
-</HEAD>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Freelancer | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-btn { background: linear-gradient(90deg, #3b82f6, #8b5cf6); transition: 0.3s; }
+        .gradient-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px #3b82f6; }
+        .card-hover:hover { border-color: #3b82f6; transform: translateY(-5px); transition: 0.3s; }
+    </style>
+</head>
+<body>
 
-<BODY>
-<H1>More Examples of Scripts Created with CGI.pm</H1>
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass">
+        <div class="text-xl font-extrabold tracking-tighter uppercase">Portfolio<span class="text-blue-500">.</span></div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#work" class="hover:text-blue-400">Projects</a>
+            <a href="#about" class="hover:text-blue-400">About Me</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
+        </div>
+        <a href="#contact" class="px-5 py-2 rounded-full text-xs font-bold uppercase gradient-btn">Hire Me</a>
+    </nav>
 
-<H2> Basic Non Sequitur Questionnaire</H2>
-<UL>
-  <LI> <A HREF="tryit.cgi">Try the script</A>
-  <LI> <A HREF="tryit.txt">Look at its source code</A>
-</UL>
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
+        <div data-aos="fade-up">
+            <span class="px-4 py-1 rounded-full border border-blue-500/30 text-blue-400 text-xs uppercase tracking-widest mb-6 inline-block">Student & Professional Freelancer</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">I build <span class="text-blue-500">digital products</span><br>that drive results.</h1>
+            <p class="max-w-xl text-gray-400 text-lg mb-10">I blend academic curiosity with professional execution to help brands grow through modern tech.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#work" class="px-8 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition font-semibold">View Projects</a>
+            </div>
+        </div>
+    </section>
 
-<H2> Advanced Non Sequitur Questionnaire</H2>
-<UL>
-  <LI> <A HREF="monty.cgi">Try the script</A>
-  <LI> <A HREF="monty.txt">Look at its source code</A>
-</UL>
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12" data-aos="fade-right">Featured Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-blue-900/40 to-black mb-6 flex items-center justify-center">
+                    <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">The Automation Engine</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Workflow Optimizer</h3>
+                    <p class="text-gray-400 text-sm mb-4">A custom Python solution built for a small business to automate client onboarding, saving 10+ hours weekly.</p>
+                </div>
+            </div>
 
-<H2> Save and restore the state of a form to a file</H2>
-<UL>
-  <LI> <A HREF="save_state.cgi">Try the script</A>
-  <LI> <A HREF="save_state.txt">Look at its source code</A>
-</UL>
+            <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-purple-900/40 to-black mb-6 flex items-center justify-center">
+                    <span class="text-purple-400 font-bold uppercase tracking-widest text-xs">Brand Transformation</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Retail UI Redesign</h3>
+                    <p class="text-gray-400 text-sm mb-4">A complete frontend overhaul for a local retailer that increased mobile conversion rates by 25%.</p>
+                </div>
+            </div>
 
-<H2> Server Push</H2>
-<ul>
-  <li><a href="nph-multipart.cgi">Try the script</a>
-  <li><a href="nph-multipart.txt">Look at its source code</a>
-</ul>
+            <div class="glass p-2 rounded-[2rem] card-hover" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-56 rounded-[1.8rem] bg-gradient-to-br from-emerald-900/40 to-black mb-6 flex items-center justify-center">
+                    <span class="text-emerald-400 font-bold uppercase tracking-widest text-xs">Data Insights</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Live Analytics Hub</h3>
+                    <p class="text-gray-400 text-sm mb-4">A React-based dashboard visualizing real-time market data through professional API integration.</p>
+                </div>
+            </div>
 
-<H2> Read the coordinates from a clickable image map</H2>
-<UL>
-  <LI> <A HREF="clickable_image.cgi">Try the script</A>
-  <LI> <A HREF="clickable_image.txt">Look at its source code</A>
-</UL>
+        </div>
+    </section>
 
-<H2> Multiple independent forms on the same page</H2>
-<UL>
-  <LI> <A HREF="multiple_forms.cgi">Try the script</A>
-  <LI> <A HREF="multiple_forms.txt">Look at its source code</A>
-</UL>
+    <section id="contact" class="py-24 px-6 bg-white/5">
+        <div class="max-w-xl mx-auto text-center" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold mb-4">Start a Project</h2>
+            <p class="text-gray-400 mb-10">I'm currently looking for new freelance opportunities. Let's build something together.</p>
+            
+            <form action="https://formspree.io/f/xoqogvbe" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded-2xl glass focus:outline-none focus:border-blue-500">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-4 rounded-2xl glass focus:outline-none focus:border-blue-500">
+                <textarea name="message" placeholder="Tell me about your project..." rows="4" required class="w-full p-4 rounded-2xl glass focus:outline-none focus:border-blue-500"></textarea>
+                <button type="submit" class="w-full py-4 rounded-2xl font-bold uppercase gradient-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<H2> How to maintain state on a page with internal links</H2>
-<UL>
-  <LI> <A HREF="internal_links.cgi">Try the script</A>
-  <LI> <A HREF="internal_links.txt">Look at its source code</A>
-</UL>
+    <footer class="py-12 text-center text-gray-500 border-t border-white/5">
+        <p>&copy; 2024 Your Student Freelance Brand. Built to deliver.</p>
+    </footer>
 
-<h2>Echo fatal script errors to the browser</h2>
-<em>This script deliberately generates a compile-time error.</em>
-<ul>
-  <li><a href="crash.cgi">Try the script</a>
-  <li><a href="crash.txt">Look at its source code</a>
-</ul>
-
-<EM>The Following Scripts Work with Netscape Navigator 2.0 and higher,
-or Internet Explorer 3.0 and higher</EM>
-
-<H2> Prompt for a file to upload and process it</H2>
-<UL>
-  <LI> <A HREF="file_upload.cgi">Try the script</A>
-  <LI> <A HREF="file_upload.txt">Look at its source code</A>
-</UL>
-
-<h2> A Continuously-Updated Page using Server Push</h2>
-<ul>
-  <li><a href="nph-clock.cgi">Try the script</a>
-  <li><a href="nph-clock.txt">Look at its source code</a>
-</ul>
-
-<h2>Compute the "diff" between two uploaded files</h2>
-<ul>
-  <li><a href="diff_upload.cgi">Try the script</a>
-  <li><a href="diff_upload.txt">Look at its source code</a>
-</ul>
-
-<h2>Maintain state over a long period with a cookie</h2>
-<ul>
-  <li><a href="cookie.cgi">Try the script</a>
-  <li><a href="cookie.txt">Look at its source code</a>
-</ul>
-
-<h2>Permanently customize the appearance of a page with a cookie</h2>
-<ul>
-  <li><a href="customize.cgi">Try the script</a>
-  <li><a href="customize.txt">Look at its source code</a>
-</ul>
-
-<h2> Popup the response in a new window</h2>
-<ul>
-  <li><a href="popup.cgi">Try the script</a>
-  <li><a href="popup.txt">Look at its source code</a>
-</ul>
-
-<h2> Side-by-side form and response using frames</h2>
-<ul>
-  <li><a href="frameset.cgi">Try the script</a>
-  <li><a href="frameset.txt">Look at its source code</a>
-</ul>
-
-<h2>Verify the Contents of a fill-out form with JavaScript</h2>
-<ul>
-  <li><a href="javascript.cgi">Try the script</a>
-  <li><a href="javascript.txt">Look at its source code</a>
-</ul>
-
-<HR>
-<MENU>
-  <LI> <A HREF="../cgi_docs.html">CGI.pm documentation</A>
-  <LI> <A HREF="../CGI.pm.tar.gz">Download the CGI.pm distribution</A>
-</MENU>
-<HR>
-<ADDRESS>Lincoln D. Stein, lstein@genome.wi.mit.edu<br>
-<a href="/">Whitehead Institute/MIT Center for Genome Research</a></ADDRESS>
-<!-- hhmts start -->
-Last modified: Wed Jun 23 15:31:47 EDT 1999
-<!-- hhmts end -->
-</BODY> </HTML> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
