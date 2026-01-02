@@ -3,237 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kruthika R | ISE Engineer</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>Kruthika R | ISE Engineering Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
-
     <style>
-        :root {
-            --emerald: #10b981;
-            --emerald-glow: rgba(16, 185, 129, 0.3);
-        }
-
-        body { 
-            background-color: #020617; 
-            color: #f8fafc; 
-            font-family: 'Outfit', sans-serif; 
-            scroll-behavior: smooth;
-        }
-
-        .glass { 
-            background: rgba(15, 23, 42, 0.6); 
-            backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-        }
-
-        .text-shimmer {
-            background: linear-gradient(120deg, #fff 0%, var(--emerald) 50%, #fff 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 5s linear infinite;
-        }
-
-        @keyframes shimmer { to { background-position: 200% center; } }
-
-        .card-hover { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .card-hover:hover { 
-            transform: translateY(-10px); 
-            border-color: var(--emerald);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--emerald-glow);
-        }
-
-        .mesh-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-            z-index: -1;
-        }
-
-        .skill-pill {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1.25rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-        .skill-pill:hover {
-            border-color: var(--emerald);
-            background: rgba(16, 185, 129, 0.05);
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
+        body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
-    <div class="mesh-bg"></div>
-
-    <nav class="fixed top-0 w-full z-50 glass py-4 px-8 flex justify-between items-center border-b border-white/5">
-        <div class="flex items-center gap-4 group cursor-pointer">
-            <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-all relative overflow-hidden">
-                <div class="relative flex items-center justify-center">
-                    <i class="fas fa-shield-halved text-emerald-500 text-xl"></i>
-                    <span class="absolute text-[10px] font-black text-white pt-0.5">K</span>
-                </div>
-            </div>
-            <div class="flex flex-col leading-none">
-                <span class="text-[10px] font-bold text-emerald-500 tracking-[0.4em] uppercase">ISE Engineer</span>
-                <span class="text-2xl font-black tracking-tighter uppercase">Kruthika R<span class="text-emerald-500">.</span></span>
-            </div>
-        </div>
-        <div class="hidden md:flex items-center gap-10 text-[10px] font-bold uppercase tracking-widest">
-            <a href="#about" class="hover:text-emerald-400 transition">Identity</a>
-            <a href="#work" class="hover:text-emerald-400 transition">Projects</a>
-            <a href="#contact" class="bg-emerald-600 px-6 py-2.5 rounded-full hover:bg-emerald-500 transition shadow-lg shadow-emerald-900/40">Hire Me</a>
+    <nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
+        <div class="text-xl font-black tracking-tighter">KRUTHIKA<span class="text-emerald-500">.ISE</span></div>
+        <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
         </div>
     </nav>
 
-    <section id="about" class="pt-52 pb-32 px-6 max-w-7xl mx-auto text-center relative">
-        <div class="inline-block px-4 py-1.5 mb-8 glass rounded-full border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-[0.3em]" data-aos="fade-down">
-            Information Science Engineer
-        </div>
-        <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-tight" data-aos="fade-up">
-            Logic Meets <br><span class="text-shimmer">Architectural Intelligence.</span>
-        </h1>
-        <p class="text-slate-400 max-w-3xl mx-auto text-xl font-light leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="200">
-            I am an <span class="text-white font-bold">Information Science Engineer</span> dedicated to turning raw data into intelligent systems. I specialize in building <span class="text-emerald-400">secure cloud architectures</span> and <span class="text-emerald-400">predictive models</span> that solve real-world efficiency gaps.
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="300">
-            <div class="skill-pill"><i class="fab fa-python text-emerald-500"></i> Python</div>
-            <div class="skill-pill"><i class="fas fa-flask text-emerald-500"></i> Flask API</div>
-            <div class="skill-pill"><i class="fas fa-brain text-emerald-500"></i> Predictive Analytics</div>
-            <div class="skill-pill"><i class="fas fa-shield-halved text-emerald-500"></i> Cybersecurity</div>
-            <div class="skill-pill"><i class="fas fa-cloud text-emerald-500"></i> Render Cloud</div>
-        </div>
-
-        <div class="flex justify-center" data-aos="fade-up" data-aos-delay="400">
-            <a href="#work" class="bg-white text-black px-12 py-4 rounded-full font-extrabold hover:scale-105 transition shadow-xl shadow-white/10">View Engineering Projects</a>
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="absolute w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full"></div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6 z-10" data-aos="fade-up">ENGINEERING<br><span class="text-emerald-500">INTELLIGENCE</span></h1>
+        <p class="text-slate-400 max-w-xl mb-10 z-10" data-aos="fade-up" data-aos-delay="100">Information Science Engineer specializing in full-stack cloud architectures and secure data processing.</p>
+        <div class="flex gap-4 z-10" data-aos="fade-up" data-aos-delay="200">
+            <a href="#projects" class="bg-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-500 transition">Explore Work</a>
         </div>
     </section>
 
-    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-4 mb-16" data-aos="fade-right">
-            <h2 class="text-4xl font-black tracking-tighter">Selected Works</h2>
-            <div class="h-px bg-white/10 flex-grow"></div>
-        </div>
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            
-            <div class="glass p-4 rounded-[2.5rem] card-hover" data-aos="fade-up">
-                <div class="h-48 rounded-[2rem] bg-gradient-to-br from-blue-600/10 to-transparent mb-8 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-                    <div id="predict-result" class="text-blue-400 font-mono text-[11px] text-center z-10 leading-relaxed uppercase">
-                        <i class="fas fa-chart-line mb-3 text-3xl"></i><br>Telemetry Offline
-                    </div>
-                </div>
-                <div class="px-2 pb-4">
-                    <h3 class="text-2xl font-bold mb-4">Stock Predictor</h3>
-                    <div class="flex gap-3 mb-4">
-                        <input id="stock-input" type="number" placeholder="Current Stock" class="w-1/2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs outline-none focus:border-blue-500 text-white">
-                        <input id="sales-input" type="number" placeholder="Avg Sales" class="w-1/2 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs outline-none focus:border-blue-500 text-white">
-                    </div>
-                    <button onclick="getPrediction()" class="w-full py-4 bg-blue-600/20 text-blue-400 rounded-2xl hover:bg-blue-600 hover:text-white transition font-black text-[10px] uppercase tracking-widest">Execute AI Analysis</button>
-                </div>
+        <div class="glass p-8 rounded-3xl" data-aos="fade-up">
+            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-500">
+                <i class="fas fa-user-shield text-xl"></i>
             </div>
-
-            <div class="glass p-4 rounded-[2.5rem] card-hover" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-48 rounded-[2rem] bg-gradient-to-br from-purple-600/10 to-transparent mb-8 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-                    <div id="vault-display" class="text-purple-400 font-mono text-[11px] text-center z-10 uppercase">
-                        <i class="fas fa-lock mb-3 text-3xl"></i><br>Vault: Encrypted
-                    </div>
-                </div>
-                <div class="px-2 pb-4">
-                    <h3 class="text-2xl font-bold mb-4">Secure Client Vault</h3>
-                    <input id="vault-key" type="password" placeholder="Enter Access Key (ise2025)" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs mb-4 outline-none focus:border-purple-500 text-white">
-                    <button onclick="unlockVault()" class="w-full py-4 bg-purple-600/20 text-purple-400 rounded-2xl hover:bg-purple-600 hover:text-white transition font-black text-[10px] uppercase tracking-widest">Decrypt Data</button>
-                </div>
+            <h3 class="text-2xl font-bold mb-4">Digital Passport</h3>
+            <p class="text-slate-400 text-sm mb-6">Secure sensitive IDs using AES-256 encryption handshake with my Flask backend.</p>
+            <input type="text" id="vault-input" placeholder="Enter ID to Encrypt..." class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-4 text-white text-sm">
+            <div class="flex gap-2 mb-6">
+                <button onclick="encryptData()" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg font-bold text-xs transition">ENCRYPT</button>
+                <button onclick="decryptData()" class="flex-1 border border-white/20 hover:bg-white/5 py-2 rounded-lg font-bold text-xs transition">DECRYPT</button>
             </div>
-
-            <div class="glass p-4 rounded-[2.5rem] card-hover border-emerald-500/10" data-aos="fade-up" data-aos-delay="400">
-                <div class="h-48 rounded-[2rem] bg-gradient-to-br from-emerald-600/10 to-transparent mb-8 flex flex-col items-center justify-center p-6 relative overflow-hidden">
-                    <div id="status-display" class="text-emerald-400 font-mono text-[11px] text-center z-10 uppercase">
-                        <i class="fas fa-satellite-dish mb-3 text-3xl"></i><br>Ready to Scrape
-                    </div>
-                </div>
-                <div class="px-2 pb-4">
-                    <h3 class="text-2xl font-bold mb-4">Lead Hunter</h3>
-                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Automated cloud-retrieval system built on Flask for rapid industry dataset analysis.</p>
-                    <button id="scrape-btn" onclick="getLiveLeads()" class="w-full py-4 bg-emerald-600/20 text-emerald-400 rounded-2xl hover:bg-emerald-600 hover:text-white transition font-black text-[10px] uppercase tracking-widest">Run Scraper</button>
-                </div>
-            </div>
-
+            <div id="vault-display" class="min-h-[50px] flex items-center justify-center text-center text-[10px] font-mono text-slate-500 italic border-t border-white/5 pt-4">Vault Ready</div>
         </div>
+
+        <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-500">
+                <i class="fas fa-radar text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Lead Hunter</h3>
+            <p class="text-slate-400 text-sm mb-6">Live Web Scraper fetching trending tech projects from Hacker News in real-time.</p>
+            <button onclick="getLiveLeads()" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition mb-6">START SCRAPE</button>
+            <div id="lead-display" class="min-h-[50px] flex items-center justify-center border-t border-white/5 pt-4">
+                <span class="text-slate-500 text-xs italic text-center">Ready to hunt...</span>
+            </div>
+        </div>
+
+        <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-500">
+                <i class="fas fa-chart-line text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Predictive Ops</h3>
+            <p class="text-slate-400 text-sm mb-6">Linear regression engine simulating stock-out dates based on historical sales.</p>
+            <input type="number" id="stock-input" placeholder="Total Stock Units" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-2 text-white text-sm">
+            <input type="number" id="sales-input" placeholder="Daily Sales Avg" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-4 text-white text-sm">
+            <button onclick="predictSales()" class="w-full bg-purple-600 hover:bg-purple-500 py-3 rounded-xl font-bold transition">CALCULATE RISK</button>
+            <div id="predict-display" class="mt-4 text-center text-sm font-bold"></div>
+        </div>
+
     </section>
 
-    <section id="contact" class="py-32 px-6 max-w-2xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-black tracking-tighter mb-4">Get In Touch</h2>
-            <p class="text-slate-400">Collaborate on a project or connect for opportunities.</p>
-        </div>
-        <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-10 rounded-[2.5rem] space-y-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <input type="text" name="name" placeholder="Name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-emerald-500 outline-none text-white transition">
-                <input type="email" name="email" placeholder="Email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-emerald-500 outline-none text-white transition">
-            </div>
-            <textarea name="message" rows="4" placeholder="How can I help you?" required class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 focus:border-emerald-500 outline-none text-white transition"></textarea>
-            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 py-5 rounded-xl font-black text-sm uppercase tracking-[0.2em] transition-all">Send Inquiry</button>
+    <section id="contact" class="py-20 px-6 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-black mb-8 text-center">CONNECT</h2>
+        <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-8 rounded-3xl">
+            <input type="email" name="email" placeholder="Your Email" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 mb-4" required>
+            <textarea name="message" placeholder="Project Inquiry..." class="w-full bg-black/40 border border-white/10 rounded-xl p-4 mb-6 h-32" required></textarea>
+            <button type="submit" class="w-full bg-white text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition">Send Dispatch</button>
         </form>
     </section>
 
-   <footer class="py-20 px-6 border-t border-white/5 text-center relative overflow-hidden">
-    <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/5 blur-[100px] rounded-full"></div>
-
-    <div class="mb-12" data-aos="fade-up">
-        <p class="text-slate-500 text-[10px] font-black tracking-[0.4em] uppercase mb-8">Engineered With</p>
-        
-        <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fab fa-python text-4xl group-hover:text-[#3776AB] transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Python</span>
-            </div>
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fas fa-leaf text-4xl group-hover:text-[#00c58e] transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Flask</span>
-            </div>
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fas fa-database text-4xl group-hover:text-[#4479A1] transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">SQL</span>
-            </div>
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fab fa-github text-4xl group-hover:text-white transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Git</span>
-            </div>
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fas fa-cloud text-4xl group-hover:text-[#46E3B7] transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Render</span>
-            </div>
-            <div class="group flex flex-col items-center gap-2">
-                <i class="fab fa-css3-alt text-4xl group-hover:text-[#38BDF8] transition-colors"></i>
-                <span class="text-[8px] font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Tailwind</span>
-            </div>
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-slate-600 text-[10px] uppercase tracking-[0.4em] mb-10">Engineered with Precision</p>
+        <div class="flex justify-center gap-12 text-2xl text-slate-400 opacity-30 mb-10">
+            <i class="fab fa-python hover:text-[#3776AB] transition cursor-help" title="Python"></i>
+            <i class="fas fa-leaf hover:text-emerald-500 transition cursor-help" title="Flask"></i>
+            <i class="fab fa-github hover:text-white transition cursor-help" title="Git"></i>
+            <i class="fas fa-server hover:text-blue-400 transition cursor-help" title="Render"></i>
         </div>
-    </div>
-
-    <div class="flex justify-center gap-10 mb-8 relative z-10">
-        <a href="#" class="text-slate-400 hover:text-emerald-400 transition-all text-2xl hover:scale-110"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:kruthika@example.com" class="text-slate-400 hover:text-emerald-400 transition-all text-2xl hover:scale-110"><i class="fas fa-envelope"></i></a>
-    </div>
-
-    <p class="text-slate-600 text-[10px] font-black tracking-[0.4em] uppercase relative z-10">
-        © 2025 KRUTHIKA R | ISE ENGINEERING PORTFOLIO
-    </p>
-</footer>
+        <p class="text-slate-600 text-xs">© 2026 KRUTHIKA R | ATRIAN ISE</p>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -241,50 +100,63 @@
 
         const RENDER_URL = "https://ise-backend-5ck1.onrender.com";
 
-        async function getPrediction() {
+        // --- 1. VAULT LOGIC (Encryption) ---
+        async function encryptData() {
+            const input = document.getElementById('vault-input').value;
+            const display = document.getElementById('vault-display');
+            if (!input) return;
+            display.innerHTML = "ENCRYPTING...";
+            try {
+                const res = await fetch(`${RENDER_URL}/api/vault/encrypt`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ content: input })
+                });
+                const data = await res.json();
+                display.innerHTML = `<span class="text-emerald-500 break-all">${data.hash}</span>`;
+            } catch (e) { display.innerHTML = "SERVER OFFLINE"; }
+        }
+
+        async function decryptData() {
+            const hash = prompt("Paste Encrypted Hash:");
+            const display = document.getElementById('vault-display');
+            if (!hash) return;
+            try {
+                const res = await fetch(`${RENDER_URL}/api/vault/decrypt`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ hash: hash })
+                });
+                const data = await res.json();
+                display.innerHTML = `<span class="text-blue-400 font-bold uppercase tracking-widest">Verified: ${data.content}</span>`;
+            } catch (e) { display.innerHTML = "INVALID HASH"; }
+        }
+
+        // --- 2. SCRAPER LOGIC ---
+        async function getLiveLeads() {
+            const display = document.getElementById('lead-display');
+            display.innerHTML = "<span class='animate-pulse text-blue-500 text-xs'>SCRAPING LIVE NEWS...</span>";
+            try {
+                const res = await fetch(`${RENDER_URL}/api/leads`);
+                const data = await res.json();
+                display.innerHTML = `<div class="text-center"><p class="text-white font-bold">${data.results[0].company}</p><p class="text-[9px] text-slate-500 uppercase mt-2 tracking-widest">Source: Hacker News</p></div>`;
+            } catch (e) { display.innerHTML = "RETRYING..."; }
+        }
+
+        // --- 3. PREDICTOR LOGIC ---
+        async function predictSales() {
             const stock = document.getElementById('stock-input').value;
             const sales = document.getElementById('sales-input').value;
-            const res = document.getElementById('predict-result');
-            if(!stock || !sales) return alert("Fill data");
-            res.innerHTML = "<span class='animate-pulse'>INITIATING MODEL...</span>";
+            const display = document.getElementById('predict-display');
             try {
-                const response = await fetch(`${RENDER_URL}/api/predict`, {
+                const res = await fetch(`${RENDER_URL}/api/predict`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ stock: stock, avg_sales: sales })
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ stock, avg_sales: sales })
                 });
-                const data = await response.json();
-                res.innerHTML = `<span class='text-2xl font-black text-blue-400'>${data.days_remaining} DAYS</span><br>STATUS: ${data.status}`;
-            } catch (e) { res.innerHTML = "WAKING CLOUD SERVER..."; }
-        }
-
-        async function unlockVault() {
-            const key = document.getElementById('vault-key').value;
-            const res = document.getElementById('vault-display');
-            res.innerHTML = "<span class='animate-pulse'>DECRYPTING...</span>";
-            try {
-                const response = await fetch(`${RENDER_URL}/api/vault`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ key: key })
-                });
-                const data = await response.json();
-                if(data.access === "Granted") {
-                    res.innerHTML = `<span class="text-emerald-400 font-bold">ACCESS GRANTED</span><br>${data.decrypted_message}`;
-                } else {
-                    res.innerHTML = `<span class="text-red-500 font-bold">ACCESS DENIED</span><br>ENCRYPTION ACTIVE`;
-                }
-            } catch (e) { res.innerHTML = "WAKING CLOUD SERVER..."; }
-        }
-
-        async function getLiveLeads() {
-            const res = document.getElementById('status-display');
-            res.innerHTML = "<span class='animate-pulse'>REQUESTING DATA...</span>";
-            try {
-                const response = await fetch(`${RENDER_URL}/api/leads`);
-                const data = await response.json();
-                res.innerHTML = `<i class="fas fa-check-circle text-2xl mb-2"></i><br>SYNCED: ${data.results[0].company}`;
-            } catch (e) { res.innerHTML = "CLOUD BOOTING..."; }
+                const data = await res.json();
+                display.innerHTML = `<span class="${data.days_remaining < 7 ? 'text-red-500' : 'text-emerald-500'}">OUT IN ${data.days_remaining} DAYS</span>`;
+            } catch (e) { display.innerHTML = "ERROR"; }
         }
     </script>
 </body>
