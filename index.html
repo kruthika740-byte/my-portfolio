@@ -3,169 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kruthika R | Full-Stack ISE Portfolio</title>
+    <title>Kruthika R | ISE Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Inter:wght@300;400;700&display=swap');
         
-        /* Creative Mode (Dark) Variables */
         :root {
-            --bg: #050505;
-            --text: #ffffff;
-            --accent: #10b981;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.05);
+            --bg: #050505; --text: #ffffff; --accent: #10b981;
+            --card-bg: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.05);
             --font: 'Outfit', sans-serif;
         }
 
-        /* Professional Mode (Light) Variables */
         body.prof-mode {
-            --bg: #f8fafc;
-            --text: #0f172a;
-            --accent: #1e40af;
-            --card-bg: #ffffff;
-            --border: #e2e8f0;
-            --font: 'Inter', sans-serif;
+            --bg: #f8fafc; --text: #0f172a; --accent: #1e40af;
+            --card-bg: #ffffff; --border: #e2e8f0; --font: 'Inter', sans-serif;
         }
 
-        body { 
-            font-family: var(--font); 
-            background-color: var(--bg); 
-            color: var(--text); 
-            transition: all 0.4s ease;
-            scroll-behavior: smooth; 
-        }
-
-        .glass { 
-            background: var(--card-bg); 
-            backdrop-filter: blur(10px); 
-            border: 1px solid var(--border); 
-        }
-
-        body.prof-mode .glass {
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-
+        body { font-family: var(--font); background-color: var(--bg); color: var(--text); transition: all 0.4s ease; scroll-behavior: smooth; }
+        .glass { background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--border); }
         .accent-text { color: var(--accent); }
         .accent-bg { background-color: var(--accent); }
+        .hidden { display: none; }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
         <div class="text-xl font-black tracking-tighter">KRUTHIKA<span class="accent-text">.ISE</span></div>
-        <div class="flex items-center gap-4 md:gap-8">
-            <button onclick="toggleStyle()" class="px-4 py-2 rounded-full border border-slate-500/20 text-[10px] font-bold tracking-widest uppercase hover:bg-white/5 transition accent-text">
-                <i class="fas fa-eye mr-2"></i> Switch View
+        <div class="flex items-center gap-4">
+            <button onclick="toggleStyle()" class="px-4 py-2 rounded-full border border-slate-500/20 text-[10px] font-bold uppercase accent-text hover:bg-white/5 transition">
+                <i class="fas fa-sync mr-2"></i> Switch View
             </button>
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
-                <a href="#projects" class="hover:accent-text transition">Projects</a>
-                <a href="#contact" class="hover:accent-text transition">Contact</a>
-            </div>
         </div>
     </nav>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
         <div class="absolute w-96 h-96 accent-bg opacity-10 blur-[120px] rounded-full"></div>
-        <h1 class="text-6xl md:text-8xl font-black mb-6 z-10" data-aos="fade-up">
-            ENGINEERING<br><span class="accent-text">INTELLIGENCE</span>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 z-10" data-aos="fade-up">
+            SYSTEMS &<br><span class="accent-text">SECURITY</span>
         </h1>
-        <p id="hero-desc" class="text-slate-400 max-w-xl mb-10 z-10" data-aos="fade-up" data-aos-delay="100">
-            Information Science Engineer specializing in full-stack cloud architectures and secure data processing.
+        <p id="hero-desc" class="text-slate-400 max-w-xl mb-10 z-10" data-aos="fade-up">
+            Information Science Engineer building secure full-stack ecosystems.
         </p>
-        <div class="flex gap-4 z-10" data-aos="fade-up" data-aos-delay="200">
-            <a href="#projects" class="accent-bg text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition">View Ecosystem</a>
-        </div>
     </section>
 
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-        <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-            <div class="w-12 h-12 accent-bg opacity-20 rounded-xl flex items-center justify-center mb-6 accent-text">
-                <i class="fas fa-user-shield text-xl"></i>
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass p-8 rounded-3xl relative" data-aos="fade-up">
+            <button onclick="toggleInstructions()" class="absolute top-4 right-4 text-slate-500 hover:accent-text transition"><i class="fas fa-info-circle"></i></button>
+            <div class="w-12 h-12 accent-bg opacity-20 rounded-xl flex items-center justify-center mb-6 accent-text"><i class="fas fa-user-shield text-xl"></i></div>
+            <h3 class="text-2xl font-bold mb-2">Digital Passport</h3>
+            <div id="passport-guide" class="hidden text-[10px] bg-white/5 p-3 rounded-lg mb-4 leading-relaxed border border-white/10">
+                <b class="accent-text">HOW TO USE:</b><br>
+                1. Type a secret ID.<br>2. Click ENCRYPT & copy the hash.<br>3. Click DECRYPT & paste hash to verify.
             </div>
-            <h3 class="text-2xl font-bold mb-4">Digital Passport</h3>
-            <p class="text-slate-400 text-sm mb-6">AES-256 encryption handshake via Flask backend.</p>
-            <input type="text" id="vault-input" placeholder="Secure ID..." class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-3 mb-4 text-sm focus:outline-none">
-            <div class="flex gap-2 mb-6">
+            <input type="text" id="vault-input" placeholder="Enter Secret..." class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-3 mb-4 text-sm focus:outline-none">
+            <div class="flex gap-2 mb-4">
                 <button onclick="encryptData()" class="flex-1 accent-bg text-white py-2 rounded-lg font-bold text-xs">ENCRYPT</button>
                 <button onclick="decryptData()" class="flex-1 border border-slate-500/20 py-2 rounded-lg font-bold text-xs">DECRYPT</button>
             </div>
-            <div id="vault-display" class="text-[10px] font-mono opacity-50 break-all text-center min-h-[40px]">Vault Idle</div>
+            <div id="vault-display" class="text-[10px] font-mono opacity-50 break-all p-2 bg-black/10 rounded-lg min-h-[40px]">Vault Idle</div>
         </div>
 
         <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-500">
-                <i class="fas fa-search text-xl"></i>
+            <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 text-orange-400"><i class="fas fa-robot text-xl"></i></div>
+            <h3 class="text-2xl font-bold mb-4">Resume AI</h3>
+            <div id="chat-box" class="h-28 overflow-y-auto mb-4 text-[10px] p-2 bg-black/20 rounded-lg opacity-80 border border-white/5">
+                Hi! Ask about my skills or projects...
             </div>
-            <h3 class="text-2xl font-bold mb-4">Lead Hunter</h3>
-            <p class="text-slate-400 text-sm mb-6">Real-time BeautifulSoup scraper targeting Hacker News.</p>
-            <button onclick="getLiveLeads()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold transition mb-6">START SCRAPE</button>
-            <div id="lead-display" class="text-xs text-center opacity-70 min-h-[40px]">Ready to hunt...</div>
+            <div class="flex gap-2">
+                <input type="text" id="chat-input" placeholder="Ask me..." class="flex-1 bg-black/10 border border-slate-500/20 rounded-lg p-2 text-xs focus:outline-none">
+                <button onclick="askBot()" class="bg-orange-600 px-3 py-2 rounded-lg text-xs font-bold"><i class="fas fa-paper-plane"></i></button>
+            </div>
         </div>
 
         <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-500">
-                <i class="fas fa-chart-line text-xl"></i>
-            </div>
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400"><i class="fas fa-search text-xl"></i></div>
+            <h3 class="text-2xl font-bold mb-4">Lead Hunter</h3>
+            <p class="text-slate-400 text-xs mb-6">Real-time web scraping via BeautifulSoup4 logic.</p>
+            <button onclick="getLiveLeads()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold text-xs transition">RUN SCRAPER</button>
+            <div id="lead-display" class="mt-4 text-[10px] text-center opacity-70">Standby...</div>
+        </div>
+
+        <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-400"><i class="fas fa-chart-pie text-xl"></i></div>
             <h3 class="text-2xl font-bold mb-4">Predictive Ops</h3>
-            <p class="text-slate-400 text-sm mb-6">Linear logic engine for stock-out forecasting.</p>
             <div class="flex flex-col gap-2 mb-4">
-                <input type="number" id="stock-input" placeholder="Stock" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-sm focus:outline-none">
-                <input type="number" id="sales-input" placeholder="Avg Sales" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-sm focus:outline-none">
+                <input type="number" id="stock-input" placeholder="Current Stock" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-xs focus:outline-none">
+                <input type="number" id="sales-input" placeholder="Avg Daily Sales" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-xs focus:outline-none">
             </div>
-            <button onclick="predictSales()" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold transition">PREDICT</button>
-            <div id="predict-display" class="mt-4 text-center font-bold min-h-[20px]"></div>
+            <button onclick="predictSales()" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold text-xs">CALCULATE</button>
+            <div id="predict-display" class="mt-4 text-center text-xs font-bold text-purple-400"></div>
         </div>
     </section>
 
     <section id="contact" class="py-20 px-6 max-w-2xl mx-auto">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl font-black mb-4">GET IN <span class="accent-text">TOUCH</span></h2>
-            <p class="text-slate-400">Have an inquiry or want to discuss ISE opportunities?</p>
-        </div>
         <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-8 rounded-3xl" data-aos="fade-up">
+            <h2 class="text-3xl font-black mb-6 text-center">GET IN <span class="accent-text">TOUCH</span></h2>
             <div class="mb-4">
-                <label class="block text-[10px] uppercase tracking-widest font-bold mb-2 opacity-50">Email Address</label>
-                <input type="email" name="email" placeholder="email@example.com" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500 transition" required>
+                <label class="block text-[10px] uppercase font-bold mb-2 opacity-50">Email</label>
+                <input type="email" name="email" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500 transition" required>
             </div>
             <div class="mb-6">
-                <label class="block text-[10px] uppercase tracking-widest font-bold mb-2 opacity-50">Message</label>
-                <textarea name="message" placeholder="How can I help you?" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm h-32 focus:outline-none focus:border-emerald-500 transition" required></textarea>
+                <label class="block text-[10px] uppercase font-bold mb-2 opacity-50">Message</label>
+                <textarea name="message" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm h-32 focus:outline-none focus:border-emerald-500 transition" required></textarea>
             </div>
             <button type="submit" class="accent-bg text-white w-full py-4 rounded-xl font-black uppercase tracking-widest hover:opacity-90 transition">Send Message</button>
         </form>
     </section>
 
-    <footer class="py-20 text-center border-t border-slate-500/10">
-        <div class="flex justify-center gap-8 text-2xl opacity-30 mb-6">
-            <i class="fab fa-python"></i>
-            <i class="fas fa-server"></i>
-            <i class="fab fa-github"></i>
-        </div>
-        <p class="text-[10px] uppercase tracking-[0.5em] opacity-50">© 2026 KRUTHIKA R | Information Science Engineer</p>
+    <footer class="py-10 text-center opacity-30 text-[10px] uppercase tracking-widest">
+        © 2026 KRUTHIKA R | ISE ENGINEER
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
+        
+        // CHANGE THIS TO YOUR RENDER URL
         const RENDER_URL = "https://ise-backend-5ck1.onrender.com";
 
         function toggleStyle() {
             document.body.classList.toggle('prof-mode');
             const isProf = document.body.classList.contains('prof-mode');
-            const desc = document.getElementById('hero-desc');
-            desc.innerText = isProf ? "Dedicated Information Science Engineer focused on building scalable, professional-grade data solutions." : "Information Science Engineer specializing in full-stack cloud architectures and secure data processing.";
+            document.getElementById('hero-desc').innerText = isProf ? "Specialized in data integrity and cloud-based information systems." : "Information Science Engineer building secure full-stack ecosystems.";
+        }
+
+        function toggleInstructions() {
+            document.getElementById('passport-guide').classList.toggle('hidden');
         }
 
         async function encryptData() {
-            const input = document.getElementById('vault-input').value;
-            if (!input) return;
+            const val = document.getElementById('vault-input').value;
+            if(!val) return;
             const res = await fetch(`${RENDER_URL}/api/vault/encrypt`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ content: input })
+                body: JSON.stringify({ content: val })
             });
             const data = await res.json();
             document.getElementById('vault-display').innerText = data.hash;
@@ -173,7 +149,7 @@
 
         async function decryptData() {
             const hash = prompt("Paste Hash:");
-            if (!hash) return;
+            if(!hash) return;
             const res = await fetch(`${RENDER_URL}/api/vault/decrypt`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -183,11 +159,27 @@
             document.getElementById('vault-display').innerText = "Verified: " + data.content;
         }
 
+        async function askBot() {
+            const query = document.getElementById('chat-input').value;
+            const box = document.getElementById('chat-box');
+            if(!query) return;
+            box.innerHTML += `<div><b>You:</b> ${query}</div>`;
+            const res = await fetch(`${RENDER_URL}/api/ask_resume`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ query })
+            });
+            const data = await res.json();
+            box.innerHTML += `<div class="accent-text"><b>Bot:</b> ${data.answer}</div>`;
+            box.scrollTop = box.scrollHeight;
+            document.getElementById('chat-input').value = "";
+        }
+
         async function getLiveLeads() {
-            document.getElementById('lead-display').innerText = "SCRAPPING...";
+            document.getElementById('lead-display').innerText = "SCRAPING...";
             const res = await fetch(`${RENDER_URL}/api/leads`);
             const data = await res.json();
-            document.getElementById('lead-display').innerText = data.results[0].company;
+            document.getElementById('lead-display').innerText = "Found: " + data.results[0].company;
         }
 
         async function predictSales() {
@@ -199,7 +191,7 @@
                 body: JSON.stringify({ stock, avg_sales: sales })
             });
             const data = await res.json();
-            document.getElementById('predict-display').innerText = `CRITICAL IN ${data.days_remaining} DAYS`;
+            document.getElementById('predict-display').innerText = `OUT IN ${data.days_remaining} DAYS`;
         }
     </script>
 </body>
