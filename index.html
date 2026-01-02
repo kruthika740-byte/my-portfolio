@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kruthika R | ISE Engineering Portfolio</title>
+    <title>Kruthika R | Full-Stack ISE Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
-        body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&family=Inter:wght@300;400;700&display=swap');
+        
+        /* Creative Mode (Dark) Variables */
+        :root {
+            --bg: #050505;
+            --text: #ffffff;
+            --accent: #10b981;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.05);
+            --font: 'Outfit', sans-serif;
+        }
+
+        /* Professional Mode (Light) Variables */
+        body.prof-mode {
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --accent: #1e40af;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --font: 'Inter', sans-serif;
+        }
+
+        body { 
+            font-family: var(--font); 
+            background-color: var(--bg); 
+            color: var(--text); 
+            transition: all 0.4s ease;
+            scroll-behavior: smooth; 
+        }
+
+        .glass { 
+            background: var(--card-bg); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid var(--border); 
+        }
+
+        body.prof-mode .glass {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .accent-text { color: var(--accent); }
+        .accent-bg { background-color: var(--accent); }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
-        <div class="text-xl font-black tracking-tighter">KRUTHIKA<span class="text-emerald-500">.ISE</span></div>
-        <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
-            <a href="#projects" class="hover:text-white transition">Projects</a>
-            <a href="#contact" class="hover:text-white transition">Contact</a>
+        <div class="text-xl font-black tracking-tighter">KRUTHIKA<span class="accent-text">.ISE</span></div>
+        <div class="flex items-center gap-4 md:gap-8">
+            <button onclick="toggleStyle()" class="px-4 py-2 rounded-full border border-slate-500/20 text-[10px] font-bold tracking-widest uppercase hover:bg-white/5 transition accent-text">
+                <i class="fas fa-eye mr-2"></i> Switch View
+            </button>
+            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
+                <a href="#projects" class="hover:accent-text transition">Projects</a>
+                <a href="#contact" class="hover:accent-text transition">Contact</a>
+            </div>
         </div>
     </nav>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
-        <div class="absolute w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full"></div>
-        <h1 class="text-6xl md:text-8xl font-black mb-6 z-10" data-aos="fade-up">ENGINEERING<br><span class="text-emerald-500">INTELLIGENCE</span></h1>
-        <p class="text-slate-400 max-w-xl mb-10 z-10" data-aos="fade-up" data-aos-delay="100">Information Science Engineer specializing in full-stack cloud architectures and secure data processing.</p>
+        <div class="absolute w-96 h-96 accent-bg opacity-10 blur-[120px] rounded-full"></div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6 z-10" data-aos="fade-up">
+            ENGINEERING<br><span class="accent-text">INTELLIGENCE</span>
+        </h1>
+        <p id="hero-desc" class="text-slate-400 max-w-xl mb-10 z-10" data-aos="fade-up" data-aos-delay="100">
+            Information Science Engineer specializing in full-stack cloud architectures and secure data processing.
+        </p>
         <div class="flex gap-4 z-10" data-aos="fade-up" data-aos-delay="200">
-            <a href="#projects" class="bg-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-500 transition">Explore Work</a>
+            <a href="#projects" class="accent-bg text-white px-8 py-4 rounded-full font-bold hover:opacity-90 transition">View Ecosystem</a>
         </div>
     </section>
 
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
         <div class="glass p-8 rounded-3xl" data-aos="fade-up">
-            <div class="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-6 text-emerald-500">
+            <div class="w-12 h-12 accent-bg opacity-20 rounded-xl flex items-center justify-center mb-6 accent-text">
                 <i class="fas fa-user-shield text-xl"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">Digital Passport</h3>
-            <p class="text-slate-400 text-sm mb-6">Secure sensitive IDs using AES-256 encryption handshake with my Flask backend.</p>
-            <input type="text" id="vault-input" placeholder="Enter ID to Encrypt..." class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-4 text-white text-sm">
+            <p class="text-slate-400 text-sm mb-6">AES-256 encryption handshake via Flask backend.</p>
+            <input type="text" id="vault-input" placeholder="Secure ID..." class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-3 mb-4 text-sm focus:outline-none">
             <div class="flex gap-2 mb-6">
-                <button onclick="encryptData()" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg font-bold text-xs transition">ENCRYPT</button>
-                <button onclick="decryptData()" class="flex-1 border border-white/20 hover:bg-white/5 py-2 rounded-lg font-bold text-xs transition">DECRYPT</button>
+                <button onclick="encryptData()" class="flex-1 accent-bg text-white py-2 rounded-lg font-bold text-xs">ENCRYPT</button>
+                <button onclick="decryptData()" class="flex-1 border border-slate-500/20 py-2 rounded-lg font-bold text-xs">DECRYPT</button>
             </div>
-            <div id="vault-display" class="min-h-[50px] flex items-center justify-center text-center text-[10px] font-mono text-slate-500 italic border-t border-white/5 pt-4">Vault Ready</div>
+            <div id="vault-display" class="text-[10px] font-mono opacity-50 break-all text-center min-h-[40px]">Vault Idle</div>
         </div>
 
         <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
             <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-500">
-                <i class="fas fa-radar text-xl"></i>
+                <i class="fas fa-search text-xl"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">Lead Hunter</h3>
-            <p class="text-slate-400 text-sm mb-6">Live Web Scraper fetching trending tech projects from Hacker News in real-time.</p>
-            <button onclick="getLiveLeads()" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition mb-6">START SCRAPE</button>
-            <div id="lead-display" class="min-h-[50px] flex items-center justify-center border-t border-white/5 pt-4">
-                <span class="text-slate-500 text-xs italic text-center">Ready to hunt...</span>
-            </div>
+            <p class="text-slate-400 text-sm mb-6">Real-time BeautifulSoup scraper targeting Hacker News.</p>
+            <button onclick="getLiveLeads()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-bold transition mb-6">START SCRAPE</button>
+            <div id="lead-display" class="text-xs text-center opacity-70 min-h-[40px]">Ready to hunt...</div>
         </div>
 
         <div class="glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
@@ -65,98 +110,96 @@
                 <i class="fas fa-chart-line text-xl"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">Predictive Ops</h3>
-            <p class="text-slate-400 text-sm mb-6">Linear regression engine simulating stock-out dates based on historical sales.</p>
-            <input type="number" id="stock-input" placeholder="Total Stock Units" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-2 text-white text-sm">
-            <input type="number" id="sales-input" placeholder="Daily Sales Avg" class="w-full bg-black/40 border border-white/10 rounded-xl p-3 mb-4 text-white text-sm">
-            <button onclick="predictSales()" class="w-full bg-purple-600 hover:bg-purple-500 py-3 rounded-xl font-bold transition">CALCULATE RISK</button>
-            <div id="predict-display" class="mt-4 text-center text-sm font-bold"></div>
+            <p class="text-slate-400 text-sm mb-6">Linear logic engine for stock-out forecasting.</p>
+            <div class="flex flex-col gap-2 mb-4">
+                <input type="number" id="stock-input" placeholder="Stock" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-sm focus:outline-none">
+                <input type="number" id="sales-input" placeholder="Avg Sales" class="bg-black/10 border border-slate-500/20 rounded-lg p-2 text-sm focus:outline-none">
+            </div>
+            <button onclick="predictSales()" class="w-full bg-purple-600 text-white py-3 rounded-xl font-bold transition">PREDICT</button>
+            <div id="predict-display" class="mt-4 text-center font-bold min-h-[20px]"></div>
         </div>
-
     </section>
 
     <section id="contact" class="py-20 px-6 max-w-2xl mx-auto">
-        <h2 class="text-4xl font-black mb-8 text-center">CONNECT</h2>
-        <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-8 rounded-3xl">
-            <input type="email" name="email" placeholder="Your Email" class="w-full bg-black/40 border border-white/10 rounded-xl p-4 mb-4" required>
-            <textarea name="message" placeholder="Project Inquiry..." class="w-full bg-black/40 border border-white/10 rounded-xl p-4 mb-6 h-32" required></textarea>
-            <button type="submit" class="w-full bg-white text-black py-4 rounded-xl font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition">Send Dispatch</button>
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-4xl font-black mb-4">GET IN <span class="accent-text">TOUCH</span></h2>
+            <p class="text-slate-400">Have an inquiry or want to discuss ISE opportunities?</p>
+        </div>
+        <form action="https://formspree.io/f/mgoelojq" method="POST" class="glass p-8 rounded-3xl" data-aos="fade-up">
+            <div class="mb-4">
+                <label class="block text-[10px] uppercase tracking-widest font-bold mb-2 opacity-50">Email Address</label>
+                <input type="email" name="email" placeholder="email@example.com" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500 transition" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-[10px] uppercase tracking-widest font-bold mb-2 opacity-50">Message</label>
+                <textarea name="message" placeholder="How can I help you?" class="w-full bg-black/10 border border-slate-500/20 rounded-xl p-4 text-sm h-32 focus:outline-none focus:border-emerald-500 transition" required></textarea>
+            </div>
+            <button type="submit" class="accent-bg text-white w-full py-4 rounded-xl font-black uppercase tracking-widest hover:opacity-90 transition">Send Message</button>
         </form>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-slate-600 text-[10px] uppercase tracking-[0.4em] mb-10">Engineered with Precision</p>
-        <div class="flex justify-center gap-12 text-2xl text-slate-400 opacity-30 mb-10">
-            <i class="fab fa-python hover:text-[#3776AB] transition cursor-help" title="Python"></i>
-            <i class="fas fa-leaf hover:text-emerald-500 transition cursor-help" title="Flask"></i>
-            <i class="fab fa-github hover:text-white transition cursor-help" title="Git"></i>
-            <i class="fas fa-server hover:text-blue-400 transition cursor-help" title="Render"></i>
+    <footer class="py-20 text-center border-t border-slate-500/10">
+        <div class="flex justify-center gap-8 text-2xl opacity-30 mb-6">
+            <i class="fab fa-python"></i>
+            <i class="fas fa-server"></i>
+            <i class="fab fa-github"></i>
         </div>
-        <p class="text-slate-600 text-xs">© 2026 KRUTHIKA R | ATRIAN ISE</p>
+        <p class="text-[10px] uppercase tracking-[0.5em] opacity-50">© 2026 KRUTHIKA R | Information Science Engineer</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-
         const RENDER_URL = "https://ise-backend-5ck1.onrender.com";
 
-        // --- 1. VAULT LOGIC (Encryption) ---
+        function toggleStyle() {
+            document.body.classList.toggle('prof-mode');
+            const isProf = document.body.classList.contains('prof-mode');
+            const desc = document.getElementById('hero-desc');
+            desc.innerText = isProf ? "Dedicated Information Science Engineer focused on building scalable, professional-grade data solutions." : "Information Science Engineer specializing in full-stack cloud architectures and secure data processing.";
+        }
+
         async function encryptData() {
             const input = document.getElementById('vault-input').value;
-            const display = document.getElementById('vault-display');
             if (!input) return;
-            display.innerHTML = "ENCRYPTING...";
-            try {
-                const res = await fetch(`${RENDER_URL}/api/vault/encrypt`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ content: input })
-                });
-                const data = await res.json();
-                display.innerHTML = `<span class="text-emerald-500 break-all">${data.hash}</span>`;
-            } catch (e) { display.innerHTML = "SERVER OFFLINE"; }
+            const res = await fetch(`${RENDER_URL}/api/vault/encrypt`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ content: input })
+            });
+            const data = await res.json();
+            document.getElementById('vault-display').innerText = data.hash;
         }
 
         async function decryptData() {
-            const hash = prompt("Paste Encrypted Hash:");
-            const display = document.getElementById('vault-display');
+            const hash = prompt("Paste Hash:");
             if (!hash) return;
-            try {
-                const res = await fetch(`${RENDER_URL}/api/vault/decrypt`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ hash: hash })
-                });
-                const data = await res.json();
-                display.innerHTML = `<span class="text-blue-400 font-bold uppercase tracking-widest">Verified: ${data.content}</span>`;
-            } catch (e) { display.innerHTML = "INVALID HASH"; }
+            const res = await fetch(`${RENDER_URL}/api/vault/decrypt`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ hash: hash })
+            });
+            const data = await res.json();
+            document.getElementById('vault-display').innerText = "Verified: " + data.content;
         }
 
-        // --- 2. SCRAPER LOGIC ---
         async function getLiveLeads() {
-            const display = document.getElementById('lead-display');
-            display.innerHTML = "<span class='animate-pulse text-blue-500 text-xs'>SCRAPING LIVE NEWS...</span>";
-            try {
-                const res = await fetch(`${RENDER_URL}/api/leads`);
-                const data = await res.json();
-                display.innerHTML = `<div class="text-center"><p class="text-white font-bold">${data.results[0].company}</p><p class="text-[9px] text-slate-500 uppercase mt-2 tracking-widest">Source: Hacker News</p></div>`;
-            } catch (e) { display.innerHTML = "RETRYING..."; }
+            document.getElementById('lead-display').innerText = "SCRAPPING...";
+            const res = await fetch(`${RENDER_URL}/api/leads`);
+            const data = await res.json();
+            document.getElementById('lead-display').innerText = data.results[0].company;
         }
 
-        // --- 3. PREDICTOR LOGIC ---
         async function predictSales() {
             const stock = document.getElementById('stock-input').value;
             const sales = document.getElementById('sales-input').value;
-            const display = document.getElementById('predict-display');
-            try {
-                const res = await fetch(`${RENDER_URL}/api/predict`, {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ stock, avg_sales: sales })
-                });
-                const data = await res.json();
-                display.innerHTML = `<span class="${data.days_remaining < 7 ? 'text-red-500' : 'text-emerald-500'}">OUT IN ${data.days_remaining} DAYS</span>`;
-            } catch (e) { display.innerHTML = "ERROR"; }
+            const res = await fetch(`${RENDER_URL}/api/predict`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ stock, avg_sales: sales })
+            });
+            const data = await res.json();
+            document.getElementById('predict-display').innerText = `CRITICAL IN ${data.days_remaining} DAYS`;
         }
     </script>
 </body>
